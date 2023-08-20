@@ -1,0 +1,71 @@
+Instruções: 
+
+Para importar senhas já geradas, usamos a função passgen.passimporttxt()
+Por padrão, o nome do arquivo será importado na própria pasta do script 
+e com o nome "passwords.txt"
+
+Para definir o caminho de importação e o nome do arquivo:
+passgen.passimporttxt(filepath='C:\\Users\\jonat\\OneDrive\\Área de Trabalho\\Py\\Random-Password-Generator\\passwords\\nome-do-arquivo.txt')
+(Não esqueça da extensão do arquivo no final, .txt)
+---------------------------------------------------------------------------------------------------------------------------
+
+O mesmo vale para exportar as senhas geradas, se quiser definir o nome do arquivo de saída
+mude o valor do argumento filename=, lembrando de por a extensão .txt no final: 
+passgen.passexporttxt(filepath='C:\\Users\\jonat\\OneDrive\\Área de Trabalho\\Py\\Random-Password-Generator\\passwords\\novo_nome_do_arquivo.txt')
+
+---------------------------------------------------------------------------------------------------------------------------
+
+As senhas serão geradas pela função password_gen do módulo passgen.
+
+password_gen(
+        lenght=8, quantify=1, numbers=True, alphabet_lower=True,
+        alphabet_upper=True, special_characters=True, repeat=True)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir o tamanho da senha: 
+lenght=
+padrão: 8 caracteres
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir a quantidade de senhas que serão geradas:
+quantify=
+padrão: 1 senha
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir se incluirá ou não números:
+numbers=
+padrão: True
+se definido como False, não adicionará números na senha
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir se incluirá ou não letras minúsculas:
+alphabet_lower=
+padrão: True
+se definido como False, não adicionará letras minúsculas na senha
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir se incluirá ou não letras maiúsculas:
+alphabet_upper=
+padrão: True
+se definido como False, não adicionará letras maiúsculas na senha
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir se incluirá ou não caracteres especiais:
+special_characters=
+padrão: True
+se definido como False, não adicionará caracteres especiais na senha
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Definir se poderá ou não repetir caracteres:
+repeat=
+padrão: True
+se definido como False, não repetirá caracteres
+
+---------------------------------------------------------------------------------------------------------------------------

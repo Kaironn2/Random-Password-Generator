@@ -1,0 +1,71 @@
+Instructions:
+
+To import previously generated passwords, use the function passgen.passimporttxt().
+By default, the file will be imported from the script's folder with the name "passwords.txt".
+
+To set the import path and file name:
+passgen.passimporttxt(filepath='C:\\Users\\jonat\\OneDrive\\Desktop\\Py\\Random-Password-Generator\\passwords\\file-name.txt')
+(Don't forget to include the file extension at the end, .txt)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+The same applies for exporting the generated passwords. If you want to set the output file's name,
+change the value of the filename= argument, and remember to add the .txt extension at the end:
+passgen.passexporttxt(filepath='C:\\Users\\jonat\\OneDrive\\Desktop\\Py\\Random-Password-Generator\\passwords\\new_file_name.txt')
+
+---------------------------------------------------------------------------------------------------------------------------
+
+The passwords will be generated using the password_gen function from the passgen module.
+
+password_gen(
+    length=8, quantity=1, numbers=True, alphabet_lower=True, 
+    alphabet_upper=True, special_characters=True, repeat=True)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting the password length:
+length=
+default: 8 characters
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting the quantity of passwords to be generated:
+quantity=
+default: 1 password
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting whether to include numbers or not:
+numbers=
+default: True
+if set to False, numbers will not be added to the password
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting whether to include lowercase letters or not:
+alphabet_lower=
+default: True
+if set to False, lowercase letters will not be added to the password
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting whether to include uppercase letters or not:
+alphabet_upper=
+default: True
+if set to False, uppercase letters will not be added to the password
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting whether to include special characters or not:
+special_characters=
+default: True
+if set to False, special characters will not be added to the password
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Setting whether characters can be repeated or not:
+repeat=
+default: True
+if set to False, characters will not be repeated
+
+---------------------------------------------------------------------------------------------------------------------------
