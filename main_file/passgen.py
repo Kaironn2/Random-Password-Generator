@@ -4,7 +4,7 @@ import os
 
 
 def password_gen(
-        length=8, quantity=1, numbers=True, alphabet_lower=True,
+        length=8, quantity=5, numbers=True, alphabet_lower=True,
         alphabet_upper=True, special_characters=True, repeat=True, existing_passwords=None):
 
     characters = ''

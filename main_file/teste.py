@@ -1,9 +1,15 @@
 from passgen import password_gen
-from importexport import passexporttxt, passimporttxt
-from menu import show_menu, import_menu
+from importxt import importxt, show_imported_passwords, existing_passwords, imported_filename
+from exportxt import exporttxt, is_valid_path
+from menu import show_menu, import_menu, export_menu, menu_passgen
+from passgen import password_gen
 import os
 
+generated_passwords = None
+
 while True:
+
+    show_imported_passwords(existing_passwords, imported_filename)
 
     option = show_menu()
 
@@ -11,9 +17,20 @@ while True:
 
         case '1':
 
-            existing_passwords = import_menu(passimporttxt)
+            os.system('cls')
+            existing_passwords, imported_filename = import_menu(
+                func_import=importxt, func_valid_path=is_valid_path)
 
+        case '2':
 
-generated_passwords = password_gen(length=8, quantity=6, repeat=False)
+            os.system('cls')
+            export_menu(func_exportxt=exporttxt,
+                        func_valid_path=is_valid_path, passwords=generated_passwords)
 
-passexporttxt(generated_passwords, filename='TESTES')
+        case '3':
+
+            generated_passwords = menu_passgen(password_gen)
+
+        case '4':
+
+            break
