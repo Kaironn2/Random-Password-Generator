@@ -19,4 +19,3 @@ def exporttxt(passwords, filename=None, filepath=None):
 
 def is_valid_path(path):
     return os.path.exists(path)
-

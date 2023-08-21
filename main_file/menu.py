@@ -123,19 +123,19 @@ def export_menu(func_exportxt, func_valid_path, passwords):
                                  'Por exemplo, se quisesemos buscar um arquivo na pasta "passwords"\n'
                                  'obs: para mac e linux, use barras normais. Para windows, 2 barras invertidas.'
                                  'C:\\Users\\jonat\OneDrive\\Área de Trabalho\\Py\\Random-Password-Generator\\passwords\n\n'
-                                 'caminho:')
+                                 'caminho: ')
 
                 filename = input('Agora digite o nome do arquivo .txt que você quer exportar: \n'
                                  'ex: passwords.txt\n\n'
-                                 'Nome do arquivo:')
+                                 'Nome do arquivo: ')
 
                 absolutely_filepath = f'{filepath}\{filename}'
 
-                valid_path = func_valid_path(absolutely_filepath)
+                valid_path = func_valid_path(filepath)
 
                 if valid_path:
-                    func_exportxt(passwods=passwords,
-                                  filename=filepath, filepath=filepath)
+                    func_exportxt(passwords=passwords,
+                                  filename=filename, filepath=filepath)
 
                 else:
                     os.system('cls')
