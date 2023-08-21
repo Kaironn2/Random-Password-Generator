@@ -38,7 +38,8 @@ def password_gen(
             else:
                 if length > len(characters):
                     raise ValueError(
-                        f'A quantidade de caracteres definidos para a senha é maior que o número de caracteres disponíveis, sendo o máximo {len(characters)} caracteres.')
+                        f'A quantidade de caracteres definidos para a senha é maior que o número de'
+                        'caracteres disponíveis, sendo o máximo {len(characters)} caracteres.')
 
                 password = ''.join(random.sample(characters, length))
 
@@ -48,26 +49,3 @@ def password_gen(
                 break
 
     return passwords
-
-
-def passexporttxt(passwords, filename=None):
-    if filename is None:
-        filename = os.path.join(os.path.dirname(__file__), 'passwords.txt')
-
-    with open(filename, 'w') as file:
-        for password in passwords:
-            file.write(password + '\n')
-        print('Senhas exportadas!')
-
-
-def passimporttxt(filename=None):
-    if filename is None:
-        filename = os.path.join(os.path.dirname(__file__), 'passwords.txt')
-
-    try:
-        with open(filename, 'r') as file:
-            passwords = [line.strip() for line in file]
-
-        return passwords
-    except FileNotFoundError:
-        print('Arquivo não existe para importar.')
